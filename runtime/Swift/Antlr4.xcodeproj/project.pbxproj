@@ -334,6 +334,7 @@
 		DBBAE76E1E22DCAC00C2FEA6 /* WritableToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBAE6321E22DCAC00C2FEA6 /* WritableToken.swift */; };
 		DBBAE7701E22DCAC00C2FEA6 /* Info-IOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBBAE6331E22DCAC00C2FEA6 /* Info-IOS.plist */; };
 		DBBAE7721E22DCAC00C2FEA6 /* Info-OSX.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBBAE6341E22DCAC00C2FEA6 /* Info-OSX.plist */; };
+		DBBD9F7B1E6343B00023B05A /* TerminalNodeWithHiddenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD9F7A1E6343B00023B05A /* TerminalNodeWithHiddenTests.swift */; };
 		F9A424AD1BCD348C00A9CD35 /* Antlr4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A4211C1BCCC35000A9CD35 /* Antlr4.framework */; };
 /* End PBXBuildFile section */
 
@@ -517,6 +518,7 @@
 		DBBAE6321E22DCAC00C2FEA6 /* WritableToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WritableToken.swift; sourceTree = "<group>"; };
 		DBBAE6331E22DCAC00C2FEA6 /* Info-IOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-IOS.plist"; sourceTree = "<group>"; };
 		DBBAE6341E22DCAC00C2FEA6 /* Info-OSX.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-OSX.plist"; sourceTree = "<group>"; };
+		DBBD9F7A1E6343B00023B05A /* TerminalNodeWithHiddenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalNodeWithHiddenTests.swift; sourceTree = "<group>"; };
 		F9A4211C1BCCC35000A9CD35 /* Antlr4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Antlr4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A422F81BCCD47300A9CD35 /* Antlr4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Antlr4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A424A81BCD348C00A9CD35 /* Antlr4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Antlr4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -563,6 +565,7 @@
 				DB4EB8B21E2CBA240095F402 /* gen */,
 				DB0991951E22DE6000FE71AA /* TokenStreamTests.swift */,
 				DB4EB8A41E2CB1B60095F402 /* SwiftTest.g4 */,
+				DBBD9F7A1E6343B00023B05A /* TerminalNodeWithHiddenTests.swift */,
 			);
 			path = Antlr4Tests;
 			sourceTree = "<group>";
@@ -1345,6 +1348,7 @@
 				DB26554F1E62CAF600282D2A /* SwiftTestParserATN.swift in Sources */,
 				DB26554B1E62CAF600282D2A /* SwiftTestLexer.swift in Sources */,
 				DB26554A1E62CAF600282D2A /* SwiftTestBaseListener.swift in Sources */,
+				DBBD9F7B1E6343B00023B05A /* TerminalNodeWithHiddenTests.swift in Sources */,
 				DB09919D1E22DE9B00FE71AA /* TokenStreamTests.swift in Sources */,
 				DB26554C1E62CAF600282D2A /* SwiftTestLexerATN.swift in Sources */,
 				DB26554E1E62CAF600282D2A /* SwiftTestParser.swift in Sources */,
