@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		DB09919D1E22DE9B00FE71AA /* TokenStreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0991951E22DE6000FE71AA /* TokenStreamTests.swift */; };
 		DB0991A11E22DF3B00FE71AA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB0991A01E22DF3B00FE71AA /* Info.plist */; };
+		DB2655141E62641200282D2A /* TerminalNodeWithHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2655131E62641200282D2A /* TerminalNodeWithHidden.swift */; };
+		DB2655151E62641200282D2A /* TerminalNodeWithHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2655131E62641200282D2A /* TerminalNodeWithHidden.swift */; };
+		DB26554A1E62CAF600282D2A /* SwiftTestBaseListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2655441E62CAF600282D2A /* SwiftTestBaseListener.swift */; };
+		DB26554B1E62CAF600282D2A /* SwiftTestLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2655451E62CAF600282D2A /* SwiftTestLexer.swift */; };
+		DB26554C1E62CAF600282D2A /* SwiftTestLexerATN.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2655461E62CAF600282D2A /* SwiftTestLexerATN.swift */; };
+		DB26554D1E62CAF600282D2A /* SwiftTestListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2655471E62CAF600282D2A /* SwiftTestListener.swift */; };
+		DB26554E1E62CAF600282D2A /* SwiftTestParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2655481E62CAF600282D2A /* SwiftTestParser.swift */; };
+		DB26554F1E62CAF600282D2A /* SwiftTestParserATN.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2655491E62CAF600282D2A /* SwiftTestParserATN.swift */; };
 		DB4EB8A51E2CB1B60095F402 /* SwiftTest.g4 in Resources */ = {isa = PBXBuildFile; fileRef = DB4EB8A41E2CB1B60095F402 /* SwiftTest.g4 */; };
-		DB4EB8AC1E2CB49D0095F402 /* SwiftTestBaseListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4EB8A61E2CB49D0095F402 /* SwiftTestBaseListener.swift */; };
-		DB4EB8AD1E2CB49D0095F402 /* SwiftTestLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4EB8A71E2CB49D0095F402 /* SwiftTestLexer.swift */; };
-		DB4EB8AE1E2CB49D0095F402 /* SwiftTestLexerATN.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4EB8A81E2CB49D0095F402 /* SwiftTestLexerATN.swift */; };
-		DB4EB8AF1E2CB49D0095F402 /* SwiftTestListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4EB8A91E2CB49D0095F402 /* SwiftTestListener.swift */; };
-		DB4EB8B01E2CB49D0095F402 /* SwiftTestParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4EB8AA1E2CB49D0095F402 /* SwiftTestParser.swift */; };
-		DB4EB8B11E2CB49D0095F402 /* SwiftTestParserATN.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4EB8AB1E2CB49D0095F402 /* SwiftTestParserATN.swift */; };
 		DBBAE6351E22DCAC00C2FEA6 /* ANTLRErrorListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBAE58E1E22DCAC00C2FEA6 /* ANTLRErrorListener.swift */; };
 		DBBAE6361E22DCAC00C2FEA6 /* ANTLRErrorListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBAE58E1E22DCAC00C2FEA6 /* ANTLRErrorListener.swift */; };
 		DBBAE6371E22DCAC00C2FEA6 /* ANTLRErrorStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBAE58F1E22DCAC00C2FEA6 /* ANTLRErrorStrategy.swift */; };
@@ -348,13 +350,14 @@
 /* Begin PBXFileReference section */
 		DB0991951E22DE6000FE71AA /* TokenStreamTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenStreamTests.swift; sourceTree = "<group>"; };
 		DB0991A01E22DF3B00FE71AA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB2655131E62641200282D2A /* TerminalNodeWithHidden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TerminalNodeWithHidden.swift; sourceTree = "<group>"; };
+		DB2655441E62CAF600282D2A /* SwiftTestBaseListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftTestBaseListener.swift; path = ../../Intermediates/Antlr4.build/Debug/Antlr4Tests.build/DerivedSources/Tests/Antlr4Tests/SwiftTestBaseListener.swift; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB2655451E62CAF600282D2A /* SwiftTestLexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftTestLexer.swift; path = ../../Intermediates/Antlr4.build/Debug/Antlr4Tests.build/DerivedSources/Tests/Antlr4Tests/SwiftTestLexer.swift; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB2655461E62CAF600282D2A /* SwiftTestLexerATN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftTestLexerATN.swift; path = ../../Intermediates/Antlr4.build/Debug/Antlr4Tests.build/DerivedSources/Tests/Antlr4Tests/SwiftTestLexerATN.swift; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB2655471E62CAF600282D2A /* SwiftTestListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftTestListener.swift; path = ../../Intermediates/Antlr4.build/Debug/Antlr4Tests.build/DerivedSources/Tests/Antlr4Tests/SwiftTestListener.swift; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB2655481E62CAF600282D2A /* SwiftTestParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftTestParser.swift; path = ../../Intermediates/Antlr4.build/Debug/Antlr4Tests.build/DerivedSources/Tests/Antlr4Tests/SwiftTestParser.swift; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB2655491E62CAF600282D2A /* SwiftTestParserATN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftTestParserATN.swift; path = ../../Intermediates/Antlr4.build/Debug/Antlr4Tests.build/DerivedSources/Tests/Antlr4Tests/SwiftTestParserATN.swift; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4EB8A41E2CB1B60095F402 /* SwiftTest.g4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftTest.g4; sourceTree = "<group>"; };
-		DB4EB8A61E2CB49D0095F402 /* SwiftTestBaseListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestBaseListener.swift; sourceTree = "<group>"; };
-		DB4EB8A71E2CB49D0095F402 /* SwiftTestLexer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestLexer.swift; sourceTree = "<group>"; };
-		DB4EB8A81E2CB49D0095F402 /* SwiftTestLexerATN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestLexerATN.swift; sourceTree = "<group>"; };
-		DB4EB8A91E2CB49D0095F402 /* SwiftTestListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestListener.swift; sourceTree = "<group>"; };
-		DB4EB8AA1E2CB49D0095F402 /* SwiftTestParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestParser.swift; sourceTree = "<group>"; };
-		DB4EB8AB1E2CB49D0095F402 /* SwiftTestParserATN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestParserATN.swift; sourceTree = "<group>"; };
 		DBBAE58E1E22DCAC00C2FEA6 /* ANTLRErrorListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANTLRErrorListener.swift; sourceTree = "<group>"; };
 		DBBAE58F1E22DCAC00C2FEA6 /* ANTLRErrorStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANTLRErrorStrategy.swift; sourceTree = "<group>"; };
 		DBBAE5901E22DCAC00C2FEA6 /* ANTLRFileStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANTLRFileStream.swift; sourceTree = "<group>"; };
@@ -567,12 +570,12 @@
 		DB4EB8B21E2CBA240095F402 /* gen */ = {
 			isa = PBXGroup;
 			children = (
-				DB4EB8A61E2CB49D0095F402 /* SwiftTestBaseListener.swift */,
-				DB4EB8A71E2CB49D0095F402 /* SwiftTestLexer.swift */,
-				DB4EB8A81E2CB49D0095F402 /* SwiftTestLexerATN.swift */,
-				DB4EB8A91E2CB49D0095F402 /* SwiftTestListener.swift */,
-				DB4EB8AA1E2CB49D0095F402 /* SwiftTestParser.swift */,
-				DB4EB8AB1E2CB49D0095F402 /* SwiftTestParserATN.swift */,
+				DB2655441E62CAF600282D2A /* SwiftTestBaseListener.swift */,
+				DB2655451E62CAF600282D2A /* SwiftTestLexer.swift */,
+				DB2655461E62CAF600282D2A /* SwiftTestLexerATN.swift */,
+				DB2655471E62CAF600282D2A /* SwiftTestListener.swift */,
+				DB2655481E62CAF600282D2A /* SwiftTestParser.swift */,
+				DB2655491E62CAF600282D2A /* SwiftTestParserATN.swift */,
 			);
 			name = gen;
 			sourceTree = "<group>";
@@ -796,6 +799,7 @@
 				DBBAE62D1E22DCAC00C2FEA6 /* TerminalNodeImpl.swift */,
 				DBBAE62E1E22DCAC00C2FEA6 /* Tree.swift */,
 				DBBAE62F1E22DCAC00C2FEA6 /* Trees.swift */,
+				DB2655131E62641200282D2A /* TerminalNodeWithHidden.swift */,
 			);
 			path = tree;
 			sourceTree = "<group>";
@@ -894,6 +898,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9A424B01BCD348C00A9CD35 /* Build configuration list for PBXNativeTarget "Antlr4Tests" */;
 			buildPhases = (
+				DB2655191E627C3700282D2A /* ShellScript */,
 				F9A424A41BCD348C00A9CD35 /* Sources */,
 				F9A424A51BCD348C00A9CD35 /* Frameworks */,
 				F9A424A61BCD348C00A9CD35 /* Resources */,
@@ -979,6 +984,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DB2655191E627C3700282D2A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/SwiftTestBaseListener.swift",
+				"$(DERIVED_FILE_DIR)/SwiftTestLexer.swift",
+				"$(DERIVED_FILE_DIR)/SwiftTestLexerATN.swift",
+				"$(DERIVED_FILE_DIR)/SwiftTestListener.swift",
+				"$(DERIVED_FILE_DIR)/SwiftTestParser.swift",
+				"$(DERIVED_FILE_DIR)/SwiftTestParserATN.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"Generating parser in $DERIVED_FILE_DIR\"\njava -jar ~/.m2/repository/org/antlr/antlr4/4.7-SNAPSHOT/antlr4-4.7-SNAPSHOT-complete.jar -Dlanguage=Swift Tests/Antlr4Tests/SwiftTest.g4 -o $DERIVED_FILE_DIR";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F9A421171BCCC35000A9CD35 /* Sources */ = {
@@ -1068,6 +1095,7 @@
 				DBBAE7211E22DCAC00C2FEA6 /* StringBuilder.swift in Sources */,
 				DBBAE6CF1E22DCAC00C2FEA6 /* BufferedTokenStream.swift in Sources */,
 				DBBAE6FF1E22DCAC00C2FEA6 /* ANTLRError.swift in Sources */,
+				DB2655141E62641200282D2A /* TerminalNodeWithHidden.swift in Sources */,
 				DBBAE67F1E22DCAC00C2FEA6 /* LexerModeAction.swift in Sources */,
 				DBBAE6591E22DCAC00C2FEA6 /* BasicState.swift in Sources */,
 				DBBAE6A11E22DCAC00C2FEA6 /* PlusLoopbackState.swift in Sources */,
@@ -1232,6 +1260,7 @@
 				DBBAE7221E22DCAC00C2FEA6 /* StringBuilder.swift in Sources */,
 				DBBAE6D01E22DCAC00C2FEA6 /* BufferedTokenStream.swift in Sources */,
 				DBBAE7001E22DCAC00C2FEA6 /* ANTLRError.swift in Sources */,
+				DB2655151E62641200282D2A /* TerminalNodeWithHidden.swift in Sources */,
 				DBBAE6801E22DCAC00C2FEA6 /* LexerModeAction.swift in Sources */,
 				DBBAE65A1E22DCAC00C2FEA6 /* BasicState.swift in Sources */,
 				DBBAE6A21E22DCAC00C2FEA6 /* PlusLoopbackState.swift in Sources */,
@@ -1313,13 +1342,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB26554F1E62CAF600282D2A /* SwiftTestParserATN.swift in Sources */,
+				DB26554B1E62CAF600282D2A /* SwiftTestLexer.swift in Sources */,
+				DB26554A1E62CAF600282D2A /* SwiftTestBaseListener.swift in Sources */,
 				DB09919D1E22DE9B00FE71AA /* TokenStreamTests.swift in Sources */,
-				DB4EB8AC1E2CB49D0095F402 /* SwiftTestBaseListener.swift in Sources */,
-				DB4EB8AD1E2CB49D0095F402 /* SwiftTestLexer.swift in Sources */,
-				DB4EB8AE1E2CB49D0095F402 /* SwiftTestLexerATN.swift in Sources */,
-				DB4EB8AF1E2CB49D0095F402 /* SwiftTestListener.swift in Sources */,
-				DB4EB8B01E2CB49D0095F402 /* SwiftTestParser.swift in Sources */,
-				DB4EB8B11E2CB49D0095F402 /* SwiftTestParserATN.swift in Sources */,
+				DB26554C1E62CAF600282D2A /* SwiftTestLexerATN.swift in Sources */,
+				DB26554E1E62CAF600282D2A /* SwiftTestParser.swift in Sources */,
+				DB26554D1E62CAF600282D2A /* SwiftTestListener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

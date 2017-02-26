@@ -29,6 +29,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "F9A422F71BCCD47300A9CD35"
+            BuildableName = "Antlr4.framework"
+            BlueprintName = "Antlr4 IOS"
+            ReferencedContainer = "container:Antlr4.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
