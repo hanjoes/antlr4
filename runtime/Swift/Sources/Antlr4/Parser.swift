@@ -599,7 +599,7 @@ open class Parser: Recognizer<ParserATNSimulator> {
      *
      *  @since 4.6.1
      */
-    public func createTerminalNode(parent: ParserRuleContext, t: Token) -> TerminalNode {
+    open func createTerminalNode(parent: ParserRuleContext, t: Token) -> TerminalNode {
      	return TerminalNodeImpl(t);
     }
     
@@ -608,7 +608,7 @@ open class Parser: Recognizer<ParserATNSimulator> {
      *
      *  @since 4.6.1
      */
-    public func createErrorNode(parent: ParserRuleContext, t: Token) -> ErrorNode {
+    open func createErrorNode(parent: ParserRuleContext, t: Token) -> ErrorNode {
     	return ErrorNode(t);
     }
 

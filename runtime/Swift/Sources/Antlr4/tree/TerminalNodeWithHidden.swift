@@ -31,13 +31,37 @@
  *  {@link org.antlr.v4.runtime.Parser#createErrorNode(ParserRuleContext, Token)} and
  *  {@link org.antlr.v4.runtime.Parser#createTerminalNode(ParserRuleContext, Token)}.
  *
+ *  Example:
+ *      class MySwiftTestParser : SwiftTestParser {
+ *          init(tokens: TokenStream) {
+ *              super(tokens)
+ *          }
+ *          override TerminalNode createTerminalNode(_ parent: ParserRuleContext, _ t: Token) {
+ *              let node = TerminalNodeWithHidden(tokens, -1, t)
+ *              node.parent = parent
+ *              return node
+ *          }
+ *      }
+ *
  *  @since 4.6.1
  */
 public class TerminalNodeWithHidden : TerminalNodeImpl {
     
-    var hiddenLeft: String?
-    var hiddenRight: String?
+    /// Hidden tokens left of this node's token. hiddenLeft[0]
+    /// is the furthest token from this node's token.
+    var hiddenLeft: [Token]?
+    
+    /// Hidden tokens right of this node's token. hiddenRight[0]
+    /// is the first token from this node's token.
+    var hiddenRight: [Token]?
 
+    /// Construct a node with left/right hidden tokens on a channel,
+    /// or all hiden tokens if channel==-1.
+    ///
+    /// - Parameters:
+    ///   - tokens: input token stream
+    ///   - channel: channel indicator, -1 for all hidden channels
+    ///   - symbol: the "surrounded" token
     public init(tokens: BufferedTokenStream, channel: Int, symbol: Token) {
       	super.init(symbol)
       	collectHiddenTokens(tokens, channel, symbol);
@@ -46,76 +70,81 @@ public class TerminalNodeWithHidden : TerminalNodeImpl {
     // TODO: how to collect hidden on error nodes (deleted, inserted, during recovery)
     public func collectHiddenTokens(_ tokens: BufferedTokenStream , _ channel: Int, _ symbol: Token) {
         let left = try! tokens.getHiddenTokensToLeft(symbol.getTokenIndex(), channel)
-        if left != nil {
-            let firstHiddenLeft = left![0]
+        _ = left.map {
+            let firstHiddenLeft = $0[0]
             var prevReal: Token?
           	if firstHiddenLeft.getTokenIndex() > 0 {
                 prevReal = try! tokens.get(firstHiddenLeft.getTokenIndex() - 1)
           	}
             if prevReal == nil { // this symbol is first real token (or EOF token) of file
-                hiddenLeft = try? tokens.getText(Interval.of(0, symbol.getTokenIndex()-1))
+                hiddenLeft = try! tokens.get(0, symbol.getTokenIndex() - 1)
           	}
           	else {
-          		// collect all token text on next line after prev real
-          		let buf = StringBuilder()
-          		for t in left! {
+          		// collect all tokens on next line after prev real
+                var nextTokens = [Token]()
+          		for t in $0 {
           			if t.getLine() > prevReal!.getLine() {
-          				buf.append(t.getText()!)
+                        nextTokens.append(t)
           			}
           		}
-          		hiddenLeft = buf.toString()
+                hiddenLeft = nextTokens
           	}
         }
       
         let right = try! tokens.getHiddenTokensToRight(symbol.getTokenIndex(), channel)
-        if right != nil {
-            let lastHiddenRight = right![right!.count - 1]
+        _ = right.map {
+            let lastHiddenRight = $0[$0.count - 1]
+            // FIXME: What if nextReal is not initialized?
             var nextReal: Token?
             if symbol.getType() != CommonToken.EOF {
                 nextReal = try! tokens.get(lastHiddenRight.getTokenIndex() + 1)
             }
           	// If this is last real token, collect all hidden to right
-            let buf = StringBuilder()
             if nextReal!.getType() == CommonToken.EOF {
-                hiddenRight = try? tokens.getText(right![0], nextReal)
+                hiddenRight = try! tokens.get($0[0].getTokenIndex(), nextReal!.getTokenIndex())
             }
             else {
                 // collect all token text on same line to right
                 let tokenLine = symbol.getLine()
-                for t in right! {
+                var nextTokens = [Token]()
+                for t in $0 {
                     if t.getLine() == tokenLine {
-                        buf.append(t.getText()!)
+                        nextTokens.append(t)
                     }
                 }
-                hiddenRight = buf.toString()
+                hiddenRight = nextTokens
             }
         }
     }
     
-	public func getHiddenLeft() -> String? {
+	public func getHiddenLeft() -> [Token]? {
         return hiddenLeft
     }
     
-    public func getHiddenRight() -> String? {
+    public func getHiddenRight() -> [Token]? {
         return hiddenRight
     }
     
-    public func setHiddenLeft(_ hiddenLeft: String) {
+    public func setHiddenLeft(_ hiddenLeft: [Token]) {
         self.hiddenLeft = hiddenLeft
     }
    
-    public func setHiddenRight(_ hiddenRight: String) {
+    public func setHiddenRight(_ hiddenRight: [Token]) {
         self.hiddenRight = hiddenRight
     }
     
 	override public func getText() -> String {
         let buf = StringBuilder()
-        if hiddenLeft != nil {
-            buf.append(hiddenLeft!)
+        _ = hiddenLeft.map {
+            _ = $0.map {
+                t in buf.append(t.getText()!)
+            }
         }
         buf.append(super.getText())
-        if hiddenRight != nil {
-            buf.append(hiddenRight!)
+        _ = hiddenRight.map {
+            _ = $0.map {
+                t in buf.append(t.getText()!)
+            }
         }
         return buf.toString();
     }
